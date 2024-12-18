@@ -1,30 +1,86 @@
 # Gerenciador de Senhas
 
-Este é um projeto de um **Gerenciador de Senhas** simples, onde você pode armazenar suas senhas de forma segura e organizada. O objetivo é facilitar o gerenciamento de credenciais e melhorar a segurança.
+Este é um **gerenciador de senhas** simples desenvolvido em Python, que utiliza criptografia para garantir a segurança das senhas armazenadas. O projeto permite que você armazene e recupere suas senhas de maneira segura, utilizando a biblioteca `cryptography` para encriptação.
 
 ## Funcionalidades
 
-- Armazenamento seguro de senhas.
-- Interface simples e intuitiva.
-- Acesso rápido aos dados armazenados.
-- Opções para adicionar, editar e excluir senhas.
+- **Armazenamento seguro de senhas**: As senhas são criptografadas antes de serem salvas em um arquivo.
+- **Recuperação de senhas**: Você pode recuperar senhas armazenadas de forma segura, após descriptografá-las.
+- **Sistema de autenticação**: O sistema requer login para acessar as funções do gerenciador de senhas.
 
-## Tecnologias
+## Tecnologias Utilizadas
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+- **Python 3.x**
+- **Tkinter**: Para a interface gráfica.
+- **Cryptography**: Para criptografar e descriptografar as senhas.
+- **Git**: Para versionamento e controle de alterações no código.
 
-- **Python**: Linguagem de programação principal.
-- **Cryptography**: Framework para o desenvolvimento da aplicação web.
+## Instalação
 
+Siga os passos abaixo para instalar e executar o projeto:
 
-## Pré-requisitos
+### 1. Clone o repositório
 
-Antes de rodar o projeto, você precisa ter o Python instalado. Você pode baixar o Python aqui: [https://www.python.org/downloads/](https://www.python.org/downloads/).
+Para clonar o repositório, use o comando abaixo:
 
-Além disso, você precisará das dependências do projeto, que podem ser instaladas a partir do arquivo `requirements.txt`.
+```
+git clone https://github.com/lordfy14/gerenciadordesenhas.git
+```
 
-### Instalando as dependências
+### 2. Crie um ambiente virtual
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/lordfy14/gerenciadordesenhas.git
+Recomenda-se criar um ambiente virtual para gerenciar as dependências do projeto. Para isso, execute os seguintes comandos:
+
+```
+cd gerenciadordesenhas
+python -m venv .venv
+```
+
+### 3. Ative o ambiente virtual
+
+No Windows, execute:
+
+```
+.venv\Scripts\activate
+```
+
+No Linux/MacOS, execute:
+
+```
+source .venv/bin/activate
+```
+
+### 4. Instale as dependências
+
+Com o ambiente virtual ativado, instale as dependências do projeto:
+
+```
+pip install -r requirements.txt
+```
+
+### 5. Execute o projeto
+
+Para executar o projeto, use o seguinte comando:
+
+```
+python main.py
+```
+
+Isso abrirá a interface gráfica onde você pode interagir com o gerenciador de senhas.
+
+## Como Usar
+
+1. Ao iniciar o aplicativo, será solicitado o **login**.
+2. Após o login, você poderá:
+   - **Adicionar uma nova senha**: Insira o serviço, o nome de usuário e a senha. A senha será criptografada e salva de forma segura.
+   - **Recuperar uma senha**: Digite o nome do serviço e o sistema irá buscar a senha criptografada associada a ele e exibirá a senha descriptografada.
+
+## Contribuição
+
+Se você deseja contribuir para este projeto, siga os passos abaixo:
+
+1. Faça um fork do repositório.
+2. Crie uma nova branch para suas alterações (`git checkout -b minha-branch`).
+3. Faça commit das suas alterações (`git commit -am 'Adiciona nova funcionalidade'`).
+4. Envie para o repositório remoto (`git push origin minha-branch`).
+5. Crie um pull request.
